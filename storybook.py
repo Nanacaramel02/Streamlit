@@ -3,7 +3,10 @@ import streamlit as st
 import os
 import time
 
-client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
+client = OpenAI(
+  api_key=st.secret['OPENAI_API_KEY']
+  api_key=os.environ['OPENAI_API_KEY']
+)
 
 #Story
 prompt = """Friendship between Hannah and Fazura"""
